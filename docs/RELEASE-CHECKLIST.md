@@ -1,16 +1,12 @@
-# Release gates
+# Release acceptance criteria
 
-- [ ] Artwork subject and direction selected (only remaining creative input requested from owner).
-- [ ] Master raster assets and traits rendered and approved.
-- [ ] Net Protocol latest skill fetched and source pinned/archived.
-- [ ] Base chain ID 8453 verified on wallet and transaction.
-- [ ] Token name and symbol approved.
-- [ ] NFT supply, mint price, mint end time approved; no unapproved financial defaults.
-- [ ] Verify paired NFT drop is ERC1155 and exact parameters supported.
-- [ ] Verify intended NFT/OpenSea compatibility with pilot.
-- [ ] Token image and metadata URLs permanent and reachable.
-- [ ] Deploy transaction `--encode-only` preview decoded; authorized signer verifies value, recipient and calldata.
-- [ ] Deployment successful; token/drop/pool addresses and logs crosschecked.
-- [ ] Source verified on Basescan where possible.
-- [ ] Token is swap-tradable; NFT is minted, listed, bought and resold on OpenSea.
-- [ ] Deployment receipts and tx hashes committed (never secrets).
+- [ ] Native Bankr token-launch capability tested on Base 8453
+- [ ] Net Protocol skill ERC721A NFT deployment capability verified on Base 8453
+- [ ] One Bankrbot instruction successfully invokes BOTH with separately authorized transactions
+- [ ] Final owner-approved art, full-size image exports, traits and metadata online
+- [ ] Owner-approved chain, token symbol, name, costs, NFT mint supply/price/wallet limit/creator reserve
+- [ ] Bankr ERC20 token deployed and pool address/tx receipt recorded
+- [ ] Net ERC721A NFT contract deployed and source verified, transfers/mint tested
+- [ ] OpenSea NFT collection indexing and listing validated
+- [ ] No Netr/Banger, ERC1155 or false ERC404 claims
+- [ ] All transaction receipts, URLs, contract addresses and config hashes recorded

@@ -1,18 +1,8 @@
 ---
-name: bnkr-nft-launch
-description: Use Bankr plus canonical Net Protocol skill to orchestrate a Base paired ERC20 and ERC1155 NFT drop with auditable approvals.
+name: bankr-native-dual-launch
+description: Coordinate native Bankr token deployment with a Net Protocol ERC721A NFT collection in one Bankr agent prompt.
 ---
 
-# Bankr NFT + token launch skill
+# Workflow
 
-Load the upstream skill from https://netprotocol.app/skill.md, then read Net's token reference at https://github.com/stuckinaboot/net-public/blob/main/skill-references/tokens.md and paired token/NFT implementation at https://github.com/stuckinaboot/net-public/tree/main/packages/net-netr.
-
-1. Parse verified owner config (chain 8453, symbol, name, approved art URI, mint price and supply).
-2. Use Netr/Banger path for token + optional ERC1155 NFT drop; **do not** use unrelated Bankr ERC20-only launcher, ERC721A-only drop or DN404.
-3. Build unsigned transaction via `netp token deploy --encode-only` and inspect every field.
-4. Seek wallet authorization before submitting through Bankr. Never request raw wallet secrets.
-5. Verify transaction events, contract code, addresses, pool, metadata and NFT mint.
-6. Verify marketplace listing and purchase; if anything cannot be done stop and disclose limitation.
-7. Return deployment receipt plus verification outcomes. Do not fabricate success.
-
-See docs/BANKR-ONE-SHOT.md and docs/RELEASE-CHECKLIST.md.
+Read docs/BANKR-NATIVE-DUAL-LAUNCH.md. First deploy fungible token via BANKR'S NATIVE TOKEN LAUNCHER on Base 8453 (NEVER Netr/Banger or netp token deploy). Then read https://netprotocol.app/skill.md and deploy ERC721A NFT collection with Net logging as Aspyn's Hood Turtles example. Keep names, brand, and deployment receipts aligned, but do not claim intrinsic token/NFT equivalence. Preview actions and seek authorized wallet approval before mainnet writes. Verify each contract and return on-chain receipts. Stop without substitution if unsupported.

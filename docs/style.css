@@ -10,12 +10,5 @@ figure img,figure canvas{width:100%;max-width:100%;height:auto;aspect-ratio:1;ob
 #demo{width:100%;min-width:0}
 @media(max-width:750px){.compare{display:grid;grid-template-columns:minmax(0,1fr)}.scene-block{padding:0}.toolbar{position:sticky;top:0;z-index:5;background:#0c1c2e;padding:13px 10px;border:1px solid #25415b;border-radius:8px}.toolbar strong{font-size:13px}.scene-block h3{margin-top:24px}figcaption{font-size:11px}}
 
-.render-frame{width:100%;aspect-ratio:1;position:relative;overflow:hidden;background:#d9effa}.render-frame>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.render-frame>canvas{position:absolute;inset:0;width:100%;height:100%;display:none}.render-frame>canvas.render-ready{display:block}.explain{margin:22px 0;padding:20px 24px;background:#142945;border:1px solid #41658c;border-radius:14px}.explain h3{margin:0 0 8px}.explain p{margin:0}
-
-/* Guaranteed visible output even when scripts fail or on constrained mobile browsers */
-.render-frame{position:relative;width:100%;aspect-ratio:1;overflow:hidden;background:#d9effa}
-.render-frame .render-fallback{display:block;width:100%;height:100%;object-fit:contain}
-.render-frame canvas{position:absolute;inset:0;display:block;width:100%;height:100%;opacity:0;transition:opacity .15s}
-.render-frame canvas.render-ready{opacity:1}
-.production-note{margin:24px 0;padding:22px;background:#172d46;border:1px solid #466e91;border-radius:14px}
-.production-note h3{margin:0 0 10px;font-size:22px}
+/* Real canvases only: no image substitutes, no hidden rendering surfaces. */
+.compare canvas[data-scene]{display:block!important;position:static!important;opacity:1!important;visibility:visible!important;width:100%!important;max-width:100%;height:auto!important;aspect-ratio:1;background:#d9effa}

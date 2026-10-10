@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "subject": {
+    "kind": "artifact",
+    "material": "metal"
+  },
+  "environment": {
+    "kind": "water"
+  },
+  "style": "cel-shaded",
+  "motion": {
+    "enabled": true,
+    "speed": 1.2
+  },
+  "lighting": {
+    "intensity": 0.9
+  }
+}

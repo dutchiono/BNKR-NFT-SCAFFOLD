@@ -1,0 +1,21 @@
+{
+  "id": "base-8453-trenchors",
+  "chainId": 8453,
+  "name": "Base 8453 Trenchors",
+  "symbol": "TRENCH",
+  "launchMode": "netr-paired-erc20-erc1155",
+  "nft": {
+    "maxSupply": null,
+    "mintPriceWei": null,
+    "mintEndTimestamp": null,
+    "ownerWallet": null
+  },
+  "graphics": {
+    "sourceRepo": "dutchiono/v4-kite-fighting-game",
+    "useKiteArt": false,
+    "style": "PENDING_OWNER_ART_DIRECTION",
+    "imageURI": null,
+    "renderSeed": "trenchors-v1"
+  },
+  "status": "DRAFT_NOT_AUTHORIZED"
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "subject": {
+    "kind": "object",
+    "material": "fabric"
+  },
+  "environment": {
+    "kind": "sky"
+  },
+  "style": "glossy-collectible",
+  "motion": {
+    "enabled": true,
+    "speed": 1
+  },
+  "lighting": {
+    "intensity": 0.8
+  }
+}
